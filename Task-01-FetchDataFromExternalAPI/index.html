@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="text-center mt-3">Fetching data by using Vanila js With Axios</h3>
+      <div class="row">
+        <div class="col-md-8 offset-md-2 mt-3 mb-5">
+          <button class="btn btn-info btn-md" id="country">/Countries</button>
+          <div class="col-md-6 float-right">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span
+                  class="input-group-text bg-info text-white"
+                  id="basic-addon3"
+                  >/Countries/</span
+                >
+              </div>
+              <input
+                type="text"
+                placeholder="code"
+                class="form-control inputCode"
+                id="basic-url"
+                aria-describedby="basic-addon3"
+              />
+              <button class="btn btn-info search">Search</button>
+            </div>
+          </div>
+
+          <!-- div for display all the country list -->
+          <table class="table table-info mt-5 table-striped">
+            <thead>
+              <tr>
+                <th>Country Name</th>
+                <th>Native</th>
+                <th>Speak Language</th>
+                <th>Continent</th>
+              </tr>
+            </thead>
+            <tbody id="displayRecords"></tbody>
+          </table>
+
+          <!-- div for display single country details -->
+          <div id="singleCountryDetails"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AXIOS LIBRARY -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- MAIN SCRIPT -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
